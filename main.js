@@ -35,12 +35,16 @@ function showAddBookForm() {
 }
 
 function hideAddBookForm() {
+    authorInput.value = '';
+    titleInput.value = '';
+    pagesInput.value = '';
+
     addBookForm.style.display = 'none';
     blurBackground.style.display = 'none';
 }
 
 
-const addBookButton = document.querySelector('form button.add');
+const addBookButton = document.querySelector('form #addBook');
 addBookButton.addEventListener('click', addBookToLibrary);
 
 const authorInput = document.querySelector('#author');
@@ -88,11 +92,11 @@ function addBookToLibrary() {
         let book = new Book(author, title, pages, isRead);
         myLibrary.push(book);
 
-        authorInput.value = '';
-        titleInput.value = '';
-        pagesInput.value = '';
-
         hideAddBookForm();
         displayBooks();
     }
 }
+
+const cancelFormButton = document.querySelector('form #cancelForm');
+cancelFormButton.addEventListener('click', cancelForm);
+
