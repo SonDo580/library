@@ -72,10 +72,7 @@ function showAddBookForm() {
 }
 
 function hideAddBookForm() {
-    authorInput.value = '';
-    titleInput.value = '';
-    pagesInput.value = '';
-
+    resetForm();
     addBookForm.style.display = 'none';
     blurBackground.style.display = 'none';
 }
