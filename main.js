@@ -39,7 +39,6 @@ const isReadInput = document.querySelector('#isRead');
 const cancelFormButton = document.querySelector('form #cancelForm');
 cancelFormButton.addEventListener('click', hideAddBookForm);
 
-
 displayBooks();     // Display all books in library on the first load
 
 function Book(author, title, pages, isRead) {
@@ -59,7 +58,8 @@ function displayBooks() {
             <td>${book.pages}</td>
             <td>${book.isRead ? 'Yes' : 'No'}</td>
             <td>
-                <button class='danger delete' data-index=${myLibrary.indexOf(book)}>Delete</button>
+                <button class='danger' data-index=${myLibrary.indexOf(book)}
+                    onClick=deleteBook>Delete</button>
             </td>`;
 
         libraryDisplay.appendChild(row);
@@ -107,7 +107,8 @@ function displayNewBook(book) {
             <td>${book.pages}</td>
             <td>${book.isRead ? 'Yes' : 'No'}</td>
             <td>
-                <button class='danger delete' data-index=${myLibrary.indexOf(book)}>Delete</button>
+                <button class='danger' data-index=${myLibrary.indexOf(book)}
+                    onClick=deleteBook>Delete</button>
             </td>`;
 
     libraryDisplay.appendChild(row);
