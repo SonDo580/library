@@ -55,6 +55,8 @@ function Book(author, title, pages, isRead) {
 }
 
 function displayBooks() {
+    libraryDisplay.textContent = '';
+
     for (let book of myLibrary) {
         displayBook(book);
     }
