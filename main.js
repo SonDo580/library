@@ -95,5 +95,9 @@ function addBookToLibrary() {
         error = true;
     }
 
-    
+    if (error) {
+        return;
+    } else {
+        let book = new Book(author, title, pages, isRead);
+    }
 }
