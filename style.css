@@ -15,7 +15,6 @@ button.primary {
     border-radius: 5px;
     padding: 8px 20px;
     font-weight: bold;
-    margin-bottom: 10px;
     transition: all .2s;
 }
 
@@ -31,13 +30,16 @@ button.danger {
     border-radius: 5px;
     padding: 8px 20px;
     font-weight: bold;
-    margin-bottom: 10px;
     transition: all .2s;
 }
 
 button.danger:hover {
     background-color: darkred;
     cursor: pointer;
+}
+
+button#showForm {
+    margin-bottom: 10px;
 }
 
 .blur {
