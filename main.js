@@ -11,6 +11,12 @@ let myLibrary = [
         pages: 100,
         isRead: false
     }
+    {
+        author: 'Silver',
+        title: 'Chaos Power',
+        pages: 175,
+        isRead: false
+    }
 ];
 
 const libraryDisplay = document.querySelector('#library tbody');
@@ -143,5 +149,8 @@ function resetInput() {
 }
 
 function deleteBook(event) {
-    console.log(event);
+    let indexDelete = event.target.getAttribute('data-index');
+    
+    myLibrary.splice(indexDelete, 1);
+    console.log(myLibrary);
 }
