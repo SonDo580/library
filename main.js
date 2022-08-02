@@ -1,4 +1,19 @@
-let myLibrary = [];
+let myLibrary = [
+    {
+        author: 'Shadow',
+        title: 'Metal Shark',
+        pages: 275,
+        isRead: true
+    },
+    {
+        author: 'Sonic',
+        title: 'Super Hedgehog',
+        pages: 100,
+        isRead: false
+    }
+];
+
+displayBooks();
 
 function Book(author, title, pages, isRead) {
     this.author = author;
