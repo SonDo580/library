@@ -12,9 +12,9 @@ const libraryDisplay = document.querySelector('#library').querySelector('tbody')
 function displayBooks() {
     for (let book of myLibrary) {
         const row = document.createElement('tr');
-        
-        row.innerHTML = 
-        `<td>${book.author}</td>
+
+        row.innerHTML =
+            `<td>${book.author}</td>
         <td>${book.title}</td>
         <td>${book.pages}</td>
         <td>${book.isRead ? 'Yes' : 'No'}</td>`;
@@ -52,7 +52,7 @@ const titleErrorSpan = document.querySelector('#titleError');
 const pagesInput = document.querySelector('#pages');
 const pagesErrorSpan = document.querySelector('#pagesError');
 
-const isReadInput = document.querySelector('#isRead');    
+const isReadInput = document.querySelector('#isRead');
 
 function addBookToLibrary() {
     authorErrorSpan.textContent = '';
@@ -62,7 +62,7 @@ function addBookToLibrary() {
     let author = authorInput.value.trim();
     let title = titleInput.value.trim();
     let pages = pagesInput.value;
-    let isRead = isReadInput.value;    
+    let isRead = isReadInput.value;
     let error = false;
 
     if (author === '') {
@@ -87,6 +87,11 @@ function addBookToLibrary() {
     } else {
         let book = new Book(author, title, pages, isRead);
         myLibrary.push(book);
+
+        authorInput.value = '';
+        titleInput.value = '';
+        pagesInput.value = '';
+
         hideAddBookForm();
         displayBooks();
     }
