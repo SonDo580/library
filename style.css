@@ -8,7 +8,7 @@ table td {
     padding: 5px 10px;
 }
 
-button.add {
+button.primary {
     border: none;
     background-color: dodgerblue;
     color: white;
@@ -19,7 +19,7 @@ button.add {
     transition: all .2s;
 }
 
-button.add:hover {
+button.primary:hover {
     background-color: blueviolet;
     cursor: pointer;
 }
@@ -34,7 +34,7 @@ button.add:hover {
 }
 
 form {
-    display: none;
+    /* display: none; */
     
     background-color: white;
     padding: 20px;
@@ -44,7 +44,6 @@ form {
     position: absolute;
     top: 15%;
     left: calc((100vw - 40%) / 2);
-    text-align: right;
 }
 
 form h3 {
@@ -86,12 +85,12 @@ form h3 {
 
 .form-row .error {
     grid-column: 2 / 3;
-    text-align: left;
     font-size: 0.8rem;
     color: red;
     height: 10px;
 }
 
-form button.add {
-    margin-top: 10px;
+.form-buttons {
+    padding-top: 10px;
+    text-align: right;
 }
