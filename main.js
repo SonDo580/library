@@ -98,9 +98,17 @@ function displayBook(book) {
     const row = document.createElement('tr');
     row.innerHTML =
         `<td>${book.author}</td>
-            <td>${book.title}</td>
-            <td>${book.pages}</td>
-            <td>${book.isRead ? 'Yes' : 'No'}</td>`;
+        <td>${book.title}</td>
+        <td>${book.pages}</td>`;
+
+    const toggleStatusButton = document.createElement('span');
+    toggleStatusButton.textContent = 'toggle';
+    toggleStatusButton.addEventListener('click', toggleStatus);
+
+    const statusCell = document.createElement('td');
+    statusCell.textContent = book.isRead ? 'Yes' : 'No';
+    statusCell.appendChild(toggleStatusButton);
+    row.appendChild(statusCell);
 
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
@@ -108,10 +116,10 @@ function displayBook(book) {
     deleteButton.setAttribute('data-index', myLibrary.indexOf(book));
     deleteButton.addEventListener('click', deleteBook);
 
-    const cell = document.createElement('td');
+    const actionCell = document.createElement('td');
+    actionCell.appendChild(deleteButton);
+    row.appendChild(actionCell);
 
-    cell.appendChild(deleteButton);
-    row.appendChild(cell);
     libraryDisplay.appendChild(row);
 }
 
@@ -152,7 +160,11 @@ function resetInput() {
 
 function deleteBook(event) {
     let indexDelete = event.target.getAttribute('data-index');
-    
+
     myLibrary.splice(indexDelete, 1);
     displayBooks();
+}
+
+function toggleStatus() {
+
 }
