@@ -63,10 +63,10 @@ form {
     padding: 20px 50px;
     border-radius: 10px;
 
-    /* width: 40vw; */
+    width: 40vw;
     position: absolute;
     top: 15%;
-    left: calc((100vw - 40%) / 2);
+    left: 25vw;
 }
 
 form h3 {
