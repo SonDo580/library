@@ -100,7 +100,7 @@ function addBookToLibrary() {
         let book = new Book(author, title, pages, isRead);
         myLibrary.push(book);
         hideAddBookForm();
-        displayNewBook(book);
+        displayBook(book);
     }
 }
 
