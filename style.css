@@ -24,6 +24,59 @@ button.add:hover {
     cursor: pointer;
 }
 
-form.addBook {
+.blur {
     display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+form {
+    display: none;
+    
+    background-color: white;
+    padding: 20px;
+
+    width: 40%;
+    position: absolute;
+    top: 20%;
+    left: calc((100vw - 40%) / 2);
+    text-align: right;
+}
+
+form h3 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.form-row label {
+    justify-self: end;
+    font-weight: bold;
+}
+
+.form-row input {
+    height: 22px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.form-row select {
+    height: 22px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid blue;
+    border-radius: 5px;
 }
