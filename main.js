@@ -89,6 +89,19 @@ function addBookToLibrary() {
     let title = titleInput.value.trim();
     let pages = pagesInput.value;
     let isRead = isReadInput.value;
+
+    if (validateForm(author, title, pages) === true) {
+        return;
+
+    } else {
+        let book = new Book(author, title, pages, isRead);
+        myLibrary.push(book);
+        hideAddBookForm();
+        displayBooks();
+    }
+}
+
+function validateForm(author, title, pages) {
     let error = false;
 
     if (author === '') {
@@ -108,34 +121,5 @@ function addBookToLibrary() {
         error = true;
     }
 
-    if (error) {
-        return;
-    } else {
-        let book = new Book(author, title, pages, isRead);
-        myLibrary.push(book);
-
-        hideAddBookForm();
-        displayBooks();
-    }
-}
-
-function validateForm(author, title, pages) {
-    if (author === '') {
-        authorErrorSpan.textContent = "Please provide the author's name!";
-        return false;
-    }
-    if (title === '') {
-        titleErrorSpan.textContent = "Please provide the book's title!";
-        return false;
-    }
-    if (pages === '') {
-        pagesErrorSpan.textContent = "Please provide the number of pages!";
-        return false;
-    }
-    if (pages <= 0) {
-        pagesErrorSpan.textContent = "Number of pages must be positive!";
-        return false;
-    }
-
-    return true;
+    return error;
 }
