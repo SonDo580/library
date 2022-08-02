@@ -59,7 +59,7 @@ function displayBooks() {
             <td>${book.isRead ? 'Yes' : 'No'}</td>
             <td>
                 <button class='danger' data-index=${myLibrary.indexOf(book)}
-                    onClick=deleteBook>Delete</button>
+                    onClick=${deleteBook}>Delete</button>
             </td>`;
 
         libraryDisplay.appendChild(row);
@@ -108,7 +108,7 @@ function displayNewBook(book) {
             <td>${book.isRead ? 'Yes' : 'No'}</td>
             <td>
                 <button class='danger' data-index=${myLibrary.indexOf(book)}
-                    onClick=deleteBook>Delete</button>
+                    onClick=${deleteBook}>Delete</button>
             </td>`;
 
     libraryDisplay.appendChild(row);
@@ -145,4 +145,8 @@ function resetForm() {
     authorErrorSpan.textContent = '';
     titleErrorSpan.textContent = '';
     pagesErrorSpan.textContent = '';
+}
+
+function deleteBook(e) {
+    console.log(e);
 }
