@@ -20,11 +20,6 @@ function Book(author, title, pages, isRead) {
     this.isRead = isRead;
 }
 
-function addBookToLibrary(book) {
-    myLibrary.push(book);
-}
-
-
 const libraryDisplay = document.querySelector('#library').querySelector('tbody');
 
 function displayBooks() {
@@ -99,5 +94,7 @@ function addBookToLibrary() {
         return;
     } else {
         let book = new Book(author, title, pages, isRead);
+
+        add
     }
 }
