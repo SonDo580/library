@@ -8,7 +8,7 @@ table td {
     padding: 5px 10px;
 }
 
-button.addBook {
+button.add {
     border: none;
     background-color: dodgerblue;
     color: white;
@@ -19,7 +19,7 @@ button.addBook {
     transition: all .2s;
 }
 
-button.addBook:hover {
+button.add:hover {
     background-color: blueviolet;
     cursor: pointer;
 }
