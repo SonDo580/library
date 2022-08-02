@@ -5,6 +5,8 @@ main {
 
 table {
     border-collapse: collapse;
+    width: 100%;
+    text-align: center;
 }
 
 table th, 
