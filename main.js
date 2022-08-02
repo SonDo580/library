@@ -34,6 +34,11 @@ function showAddBookForm() {
     blurBackground.style.display = 'block';
 }
 
+function hideAddBookForm() {
+    addBookForm.style.display = 'none';
+    blurBackground.style.display = 'none';
+}
+
 
 const addBookButton = document.querySelector('form button.add');
 addBookButton.addEventListener('click', addBookToLibrary);
@@ -82,6 +87,8 @@ function addBookToLibrary() {
     } else {
         let book = new Book(author, title, pages, isRead);
         myLibrary.push(book);
-        
+
+
+        displayBooks();
     }
 }
