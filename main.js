@@ -123,3 +123,13 @@ function isInvalidForm(author, title, pages) {
 
     return error;
 }
+
+function resetForm() {
+    authorInput.value = '';
+    titleInput.value = '';
+    pagesInput.value = '';
+    
+    authorErrorSpan.textContent = '';
+    titleErrorSpan.textContent = '';
+    pagesErrorSpan.textContent = '';
+}
