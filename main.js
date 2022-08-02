@@ -152,5 +152,5 @@ function deleteBook(event) {
     let indexDelete = event.target.getAttribute('data-index');
     
     myLibrary.splice(indexDelete, 1);
-    
+    displayBooks();
 }
