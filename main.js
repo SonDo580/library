@@ -66,9 +66,7 @@ function hideForm() {
 }
 
 function addBook() {
-    authorErrorSpan.textContent = '';
-    titleErrorSpan.textContent = '';
-    pagesErrorSpan.textContent = '';
+    resetError();
 
     let author = authorInput.value.trim();
     let title = titleInput.value.trim();
