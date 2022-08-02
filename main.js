@@ -50,25 +50,7 @@ function Book(author, title, pages, isRead) {
 
 function displayBooks() {
     for (let book of myLibrary) {
-        const row = document.createElement('tr');
-
-        row.innerHTML =
-            `<td>${book.author}</td>
-            <td>${book.title}</td>
-            <td>${book.pages}</td>
-            <td>${book.isRead ? 'Yes' : 'No'}</td>`;
-
-        const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Delete';
-        deleteButton.classList.add('danger');
-        deleteButton.setAttribute('data-index', myLibrary.indexOf(book));
-        deleteButton.addEventListener('click', deleteBook);
-
-        const cell = document.createElement('td');
-
-        cell.appendChild(deleteButton);
-        row.appendChild(cell);
-        libraryDisplay.appendChild(row);
+        displayBook(book);
     }
 }
 
