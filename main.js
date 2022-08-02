@@ -51,3 +51,8 @@ function showAddBookForm() {
     addBookForm.style.display = 'block';
     blurBackground.style.display = 'block';
 }
+
+
+const addBookButton = document.querySelector('form button.add');
+addBookButton.addEventListener('click', addBookToLibrary);
+
