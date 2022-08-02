@@ -24,6 +24,7 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 }
 
+
 const libraryDisplay = document.querySelector('#library').querySelector('tbody');
 
 function displayBooks() {
@@ -40,10 +41,13 @@ function displayBooks() {
     }
 }
 
+
 const showFormButton = document.querySelector('button#showForm');
 const addBookForm = document.querySelector('form');
+const blurBackground = document.querySelector('.blur');
 showFormButton.addEventListener('click', showAddBookForm);
 
 function showAddBookForm() {
     addBookForm.style.display = 'block';
+    blurBackground.style.display = 'block';
 }
