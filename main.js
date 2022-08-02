@@ -104,7 +104,7 @@ function addBookToLibrary() {
     }
 }
 
-function displayNewBook(book) {
+function displayBook(book) {
     const row = document.createElement('tr');
 
         row.innerHTML =
