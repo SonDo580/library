@@ -167,6 +167,9 @@ function deleteBook(event) {
     displayBooks();
 }
 
-function toggleStatus() {
+function toggleStatus(event) {
+    let indexToggle = event.target.getAttribute('data-index');
 
+    myLibrary[indexToggle].isRead = !myLibrary[indexToggle].isRead;
+    displayBooks();
 }
