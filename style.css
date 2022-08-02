@@ -15,6 +15,22 @@ table td {
     padding: 5px 10px;
 }
 
+table span.toggle {
+    display: inline-block;
+    background-color: cadetblue;
+    color: white;
+    font-weight: bold;
+    margin-left: 5px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    transition: all .3s;
+}
+
+table span.toggle:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
 button.primary {
     border: none;
     background-color: dodgerblue;
