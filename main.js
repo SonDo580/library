@@ -42,7 +42,7 @@ function displayBooks() {
 }
 
 
-const showFormButton = document.querySelector('button#showForm');
+const showFormButton = document.querySelector('#showForm');
 const addBookForm = document.querySelector('form');
 const blurBackground = document.querySelector('.blur');
 showFormButton.addEventListener('click', showAddBookForm);
@@ -56,3 +56,10 @@ function showAddBookForm() {
 const addBookButton = document.querySelector('form button.add');
 addBookButton.addEventListener('click', addBookToLibrary);
 
+function addBookToLibrary() {
+    let author = document.querySelector('#author').value.trim();
+    let title = document.querySelector('#title').value.trim();
+    let pages = document.querySelector('#pages').value;
+    let isRead = document.querySelector('#isRead').value;
+
+}
