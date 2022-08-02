@@ -98,5 +98,5 @@ function addBookToLibrary() {
 }
 
 const cancelFormButton = document.querySelector('form #cancelForm');
-cancelFormButton.addEventListener('click', cancelForm);
+cancelFormButton.addEventListener('click', hideAddBookForm);
 
