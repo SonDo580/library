@@ -24,6 +24,22 @@ button.primary:hover {
     cursor: pointer;
 }
 
+button.danger {
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: all .2s;
+}
+
+button.danger:hover {
+    background-color: darkred;
+    cursor: pointer;
+}
+
 .blur {
     display: none;
     width: 100vw;
@@ -34,7 +50,7 @@ button.primary:hover {
 }
 
 form {
-    /* display: none; */
+    display: none;
     
     background-color: white;
     padding: 20px;
