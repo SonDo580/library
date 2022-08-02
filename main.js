@@ -68,8 +68,32 @@ const pagesErrorSpan = document.querySelector('#pagesError');
 const isReadInput = document.querySelector('#isRead');    
 
 function addBookToLibrary() {
+    authorErrorSpan.textContent = '';
+    titleErrorSpan.textContent = '';
+    pagesErrorSpan.textContent = '';
+
     let author = authorInput.value.trim();
     let title = titleInput.value.trim();
     let pages = pagesInput.value;
     let isRead = isReadInput.value;    
+    let error = false;
+
+    if (author === '') {
+        authorErrorSpan.textContent = "Please provide the author's name!";
+        error = true;
+    }
+    if (title === '') {
+        titleErrorSpan.textContent = "Please provide the book's title!";
+        error = true;
+    }
+    if (pages === '') {
+        pagesErrorSpan.textContent = "Please provide the number of pages!";
+        error = true;
+    }
+    if (pages <= 0) {
+        pagesErrorSpan.textContent = "Number of pages must be positive!";
+        error = true;
+    }
+
+    
 }
