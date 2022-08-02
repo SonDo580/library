@@ -16,7 +16,7 @@ let myLibrary = [
 const libraryDisplay = document.querySelector('#library tbody');
 
 const showFormButton = document.querySelector('#showForm');
-showFormButton.addEventListener('click', showAddBookForm);
+showFormButton.addEventListener('click', showForm);
 
 const addBookForm = document.querySelector('form');
 
@@ -72,7 +72,7 @@ function displayBooks() {
     }
 }
 
-function showAddBookForm() {
+function showForm() {
     addBookForm.style.display = 'block';
     blurBackground.style.display = 'block';
 }
