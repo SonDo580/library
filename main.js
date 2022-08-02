@@ -104,6 +104,7 @@ function displayBook(book) {
     const toggleStatusButton = document.createElement('span');
     toggleStatusButton.classList.add('toggle');
     toggleStatusButton.textContent = 'toggle';
+    toggleStatusButton.setAttribute('data-index', myLibrary.indexOf(book));
     toggleStatusButton.addEventListener('click', toggleStatus);
 
     const statusCell = document.createElement('td');
