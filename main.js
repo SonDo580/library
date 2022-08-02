@@ -41,7 +41,7 @@ function displayBooks() {
 }
 
 const showFormButton = document.querySelector('button#showForm');
-const addBookForm = document.querySelector('form.addBook');
+const addBookForm = document.querySelector('form');
 showFormButton.addEventListener('click', showAddBookForm);
 
 function showAddBookForm() {
