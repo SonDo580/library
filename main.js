@@ -65,9 +65,11 @@ const titleErrorSpan = document.querySelector('#titleError');
 const pagesInput = document.querySelector('#pages');
 const pagesErrorSpan = document.querySelector('#pagesError');
 
+const isReadInput = document.querySelector('#isRead');    
+
 function addBookToLibrary() {
-    let author = document.querySelector('#author').value.trim();
-    let title = document.querySelector('#title').value.trim();
-    let pages = document.querySelector('#pages').value;
-    let isRead = document.querySelector('#isRead').value;    
+    let author = authorInput.value.trim();
+    let title = titleInput.value.trim();
+    let pages = pagesInput.value;
+    let isRead = isReadInput.value;    
 }
