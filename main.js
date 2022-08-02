@@ -56,10 +56,18 @@ function showAddBookForm() {
 const addBookButton = document.querySelector('form button.add');
 addBookButton.addEventListener('click', addBookToLibrary);
 
+const authorInput = document.querySelector('#author');
+const authorErrorSpan = document.querySelector('#authorError');
+
+const titleInput = document.querySelector('#title');
+const titleErrorSpan = document.querySelector('#titleError');
+
+const pagesInput = document.querySelector('#pages');
+const pagesErrorSpan = document.querySelector('#pagesError');
+
 function addBookToLibrary() {
     let author = document.querySelector('#author').value.trim();
     let title = document.querySelector('#title').value.trim();
     let pages = document.querySelector('#pages').value;
-    let isRead = document.querySelector('#isRead').value;
-
+    let isRead = document.querySelector('#isRead').value;    
 }
