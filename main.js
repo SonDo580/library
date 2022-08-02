@@ -1,17 +1,4 @@
-let myLibrary = [
-    {
-        author: 'John',
-        title: 'Slicing Bread',
-        pages: 125,
-        isRead: true
-    },
-    {
-        author: 'Mary',
-        title: 'Poking Face',
-        pages: 200,
-        isRead: false
-    }
-];
+let myLibrary = [];
 
 function Book(author, title, pages, isRead) {
     this.author = author;
@@ -94,7 +81,7 @@ function addBookToLibrary() {
         return;
     } else {
         let book = new Book(author, title, pages, isRead);
-
-        add
+        myLibrary.push(book);
+        
     }
 }
