@@ -88,24 +88,23 @@ function addBook() {
 
 function displayBook(book) {
     const row = document.createElement('tr');
-
-        row.innerHTML =
-            `<td>${book.author}</td>
+    row.innerHTML =
+        `<td>${book.author}</td>
             <td>${book.title}</td>
             <td>${book.pages}</td>
             <td>${book.isRead ? 'Yes' : 'No'}</td>`;
 
-        const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Delete';
-        deleteButton.classList.add('danger');
-        deleteButton.setAttribute('data-index', myLibrary.indexOf(book));
-        deleteButton.addEventListener('click', deleteBook);
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.classList.add('danger');
+    deleteButton.setAttribute('data-index', myLibrary.indexOf(book));
+    deleteButton.addEventListener('click', deleteBook);
 
-        const cell = document.createElement('td');
+    const cell = document.createElement('td');
 
-        cell.appendChild(deleteButton);
-        row.appendChild(cell);
-        libraryDisplay.appendChild(row);
+    cell.appendChild(deleteButton);
+    row.appendChild(cell);
+    libraryDisplay.appendChild(row);
 }
 
 function isInvalidForm(author, title, pages) {
@@ -131,14 +130,16 @@ function isInvalidForm(author, title, pages) {
     return error;
 }
 
-function resetForm() {
-    authorInput.value = '';
-    titleInput.value = '';
-    pagesInput.value = '';
-
+function resetError() {
     authorErrorSpan.textContent = '';
     titleErrorSpan.textContent = '';
     pagesErrorSpan.textContent = '';
+}
+
+function resetInput() {
+    authorInput.value = '';
+    titleInput.value = '';
+    pagesInput.value = '';
 }
 
 function deleteBook(event) {
