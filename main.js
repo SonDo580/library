@@ -13,8 +13,6 @@ let myLibrary = [
     }
 ];
 
-
-
 function Book(author, title, pages, isRead) {
     this.author = author;
     this.title = title;
@@ -42,4 +40,10 @@ function displayBooks() {
     }
 }
 
-displayBooks();
+const showFormButton = document.querySelector('button#showForm');
+const addBookForm = document.querySelector('form.addBook');
+showFormButton.addEventListener('click', showAddBookForm);
+
+function showAddBookForm() {
+    addBookForm.style.display = 'block';
+}
