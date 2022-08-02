@@ -90,7 +90,7 @@ function addBookToLibrary() {
     let pages = pagesInput.value;
     let isRead = isReadInput.value;
 
-    if (validateForm(author, title, pages) === true) {
+    if (isInvalidForm(author, title, pages)) {
         return;
 
     } else {
@@ -101,7 +101,7 @@ function addBookToLibrary() {
     }
 }
 
-function validateForm(author, title, pages) {
+function isInvalidForm(author, title, pages) {
     let error = false;
 
     if (author === '') {
