@@ -40,7 +40,7 @@ const cancelFormButton = document.querySelector('form #cancelForm');
 cancelFormButton.addEventListener('click', hideAddBookForm);
 
 
-displayBooks();
+displayBooks();     // Display the books when load the page
 
 function Book(author, title, pages, isRead) {
     this.author = author;
@@ -59,7 +59,7 @@ function displayBooks() {
             <td>${book.pages}</td>
             <td>${book.isRead ? 'Yes' : 'No'}</td>
             <td>
-                <button class='danger'>Delete</button>
+                <button class='danger' data-index=${myLibrary.indexOf(book)}>Delete</button>
             </td>`;
 
         libraryDisplay.appendChild(row);
@@ -80,9 +80,6 @@ function hideAddBookForm() {
     addBookForm.style.display = 'none';
     blurBackground.style.display = 'none';
 }
-
-
-
 
 function addBookToLibrary() {
     authorErrorSpan.textContent = '';
