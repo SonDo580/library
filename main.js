@@ -40,7 +40,7 @@ const cancelFormButton = document.querySelector('form #cancelForm');
 cancelFormButton.addEventListener('click', hideAddBookForm);
 
 
-displayBooks();     // Display the books when load the page
+displayBooks();     // Display all books in library on the first load
 
 function Book(author, title, pages, isRead) {
     this.author = author;
@@ -94,8 +94,23 @@ function addBookToLibrary() {
         let book = new Book(author, title, pages, isRead);
         myLibrary.push(book);
         hideAddBookForm();
-        displayBooks();
+        // showNewBook(book);
     }
+}
+
+function showNewBook(book) {
+    const row = document.createElement('tr');
+
+    row.innerHTML =
+        `<td>${book.author}</td>
+            <td>${book.title}</td>
+            <td>${book.pages}</td>
+            <td>${book.isRead ? 'Yes' : 'No'}</td>
+            <td>
+                <button class='danger' data-index=${myLibrary.indexOf(book)}>Delete</button>
+            </td>`;
+
+    libraryDisplay.appendChild(row);
 }
 
 function isInvalidForm(author, title, pages) {
@@ -125,7 +140,7 @@ function resetForm() {
     authorInput.value = '';
     titleInput.value = '';
     pagesInput.value = '';
-    
+
     authorErrorSpan.textContent = '';
     titleErrorSpan.textContent = '';
     pagesErrorSpan.textContent = '';
