@@ -23,3 +23,7 @@ button.addBook:hover {
     background-color: blueviolet;
     cursor: pointer;
 }
+
+form.addBook {
+    display: none;
+}
