@@ -98,7 +98,7 @@ function addBookToLibrary() {
     }
 }
 
-function showNewBook(book) {
+function displayNewBook(book) {
     const row = document.createElement('tr');
 
     row.innerHTML =
