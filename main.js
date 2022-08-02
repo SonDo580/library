@@ -60,7 +60,9 @@ function showForm() {
 }
 
 function hideForm() {
-    resetForm();
+    resetInput();
+    resetError();
+
     addBookForm.style.display = 'none';
     blurBackground.style.display = 'none';
 }
