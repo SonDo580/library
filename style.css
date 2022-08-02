@@ -7,3 +7,13 @@ table td {
     border: 2px solid cyan;
     padding: 5px 10px;
 }
+
+button.addBook {
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
