@@ -23,7 +23,7 @@ const addBookForm = document.querySelector('form');
 const blurBackground = document.querySelector('.blur');
 
 const addBookButton = document.querySelector('form #addBook');
-addBookButton.addEventListener('click', addBookToLibrary);
+addBookButton.addEventListener('click', addBook);
 
 const authorInput = document.querySelector('#author');
 const authorErrorSpan = document.querySelector('#authorError');
@@ -83,7 +83,7 @@ function hideAddBookForm() {
     blurBackground.style.display = 'none';
 }
 
-function addBookToLibrary() {
+function addBook() {
     authorErrorSpan.textContent = '';
     titleErrorSpan.textContent = '';
     pagesErrorSpan.textContent = '';
