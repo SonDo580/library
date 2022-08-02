@@ -13,6 +13,8 @@ let myLibrary = [
     }
 ];
 
+const libraryDisplay = document.querySelector('#library tbody');
+
 displayBooks();
 
 function Book(author, title, pages, isRead) {
@@ -22,19 +24,21 @@ function Book(author, title, pages, isRead) {
     this.isRead = isRead;
 }
 
-const libraryDisplay = document.querySelector('#library').querySelector('tbody');
-
 function displayBooks() {
     for (let book of myLibrary) {
         const row = document.createElement('tr');
 
         row.innerHTML =
             `<td>${book.author}</td>
-        <td>${book.title}</td>
-        <td>${book.pages}</td>
-        <td>${book.isRead ? 'Yes' : 'No'}</td>`;
+            <td>${book.title}</td>
+            <td>${book.pages}</td>
+            <td>${book.isRead ? 'Yes' : 'No'}</td>
+            <td>
+                <button class='danger'>Delete</button>
+            </td>`;
 
         libraryDisplay.appendChild(row);
+        console.log(libraryDisplay);
     }
 }
 
