@@ -37,7 +37,7 @@ const pagesErrorSpan = document.querySelector('#pagesError');
 const isReadInput = document.querySelector('#isRead');
 
 const cancelFormButton = document.querySelector('form #cancelForm');
-cancelFormButton.addEventListener('click', hideAddBookForm);
+cancelFormButton.addEventListener('click', hideForm);
 
 displayBooks();     // Display all books in library on the first load
 
@@ -77,7 +77,7 @@ function showForm() {
     blurBackground.style.display = 'block';
 }
 
-function hideAddBookForm() {
+function hideForm() {
     resetForm();
     addBookForm.style.display = 'none';
     blurBackground.style.display = 'none';
@@ -99,7 +99,7 @@ function addBook() {
     } else {
         let book = new Book(author, title, pages, isRead);
         myLibrary.push(book);
-        hideAddBookForm();
+        hideForm();
         displayBook(book);
     }
 }
