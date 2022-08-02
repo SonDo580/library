@@ -42,7 +42,7 @@ form {
 
     width: 40%;
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: calc((100vw - 40%) / 2);
     text-align: right;
 }
@@ -82,4 +82,16 @@ form h3 {
     background-color: white;
     border: 1px solid blue;
     border-radius: 5px;
+}
+
+.form-row .error {
+    grid-column: 2 / 3;
+    text-align: left;
+    font-size: 0.8rem;
+    color: red;
+    height: 10px;
+}
+
+form button.add {
+    margin-top: 10px;
 }
