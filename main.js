@@ -15,6 +15,31 @@ let myLibrary = [
 
 const libraryDisplay = document.querySelector('#library tbody');
 
+const showFormButton = document.querySelector('#showForm');
+showFormButton.addEventListener('click', showAddBookForm);
+
+const addBookForm = document.querySelector('form');
+
+const blurBackground = document.querySelector('.blur');
+
+const addBookButton = document.querySelector('form #addBook');
+addBookButton.addEventListener('click', addBookToLibrary);
+
+const authorInput = document.querySelector('#author');
+const authorErrorSpan = document.querySelector('#authorError');
+
+const titleInput = document.querySelector('#title');
+const titleErrorSpan = document.querySelector('#titleError');
+
+const pagesInput = document.querySelector('#pages');
+const pagesErrorSpan = document.querySelector('#pagesError');
+
+const isReadInput = document.querySelector('#isRead');
+
+const cancelFormButton = document.querySelector('form #cancelForm');
+cancelFormButton.addEventListener('click', hideAddBookForm);
+
+
 displayBooks();
 
 function Book(author, title, pages, isRead) {
@@ -42,12 +67,6 @@ function displayBooks() {
     }
 }
 
-
-const showFormButton = document.querySelector('#showForm');
-const addBookForm = document.querySelector('form');
-const blurBackground = document.querySelector('.blur');
-showFormButton.addEventListener('click', showAddBookForm);
-
 function showAddBookForm() {
     addBookForm.style.display = 'block';
     blurBackground.style.display = 'block';
@@ -63,19 +82,7 @@ function hideAddBookForm() {
 }
 
 
-const addBookButton = document.querySelector('form #addBook');
-addBookButton.addEventListener('click', addBookToLibrary);
 
-const authorInput = document.querySelector('#author');
-const authorErrorSpan = document.querySelector('#authorError');
-
-const titleInput = document.querySelector('#title');
-const titleErrorSpan = document.querySelector('#titleError');
-
-const pagesInput = document.querySelector('#pages');
-const pagesErrorSpan = document.querySelector('#pagesError');
-
-const isReadInput = document.querySelector('#isRead');
 
 function addBookToLibrary() {
     authorErrorSpan.textContent = '';
@@ -115,7 +122,3 @@ function addBookToLibrary() {
         displayBooks();
     }
 }
-
-const cancelFormButton = document.querySelector('form #cancelForm');
-cancelFormButton.addEventListener('click', hideAddBookForm);
-
