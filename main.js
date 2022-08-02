@@ -56,12 +56,18 @@ function displayBooks() {
             `<td>${book.author}</td>
             <td>${book.title}</td>
             <td>${book.pages}</td>
-            <td>${book.isRead ? 'Yes' : 'No'}</td>
-            <td>
-                <button class='danger' data-index=${myLibrary.indexOf(book)}
-                    onClick=${deleteBook}>Delete</button>
-            </td>`;
+            <td>${book.isRead ? 'Yes' : 'No'}</td>`;
 
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.classList.add('danger');
+        deleteButton.setAttribute('data-index', myLibrary.indexOf(book));
+        deleteButton.addEventListener('click', deleteBook);
+
+        const cell = document.createElement('td');
+
+        cell.appendChild(deleteButton);
+        row.appendChild(cell);
         libraryDisplay.appendChild(row);
     }
 }
@@ -101,17 +107,23 @@ function addBookToLibrary() {
 function displayNewBook(book) {
     const row = document.createElement('tr');
 
-    row.innerHTML =
-        `<td>${book.author}</td>
+        row.innerHTML =
+            `<td>${book.author}</td>
             <td>${book.title}</td>
             <td>${book.pages}</td>
-            <td>${book.isRead ? 'Yes' : 'No'}</td>
-            <td>
-                <button class='danger' data-index=${myLibrary.indexOf(book)}
-                    onClick=${deleteBook}>Delete</button>
-            </td>`;
+            <td>${book.isRead ? 'Yes' : 'No'}</td>`;
 
-    libraryDisplay.appendChild(row);
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.classList.add('danger');
+        deleteButton.setAttribute('data-index', myLibrary.indexOf(book));
+        deleteButton.addEventListener('click', deleteBook);
+
+        const cell = document.createElement('td');
+
+        cell.appendChild(deleteButton);
+        row.appendChild(cell);
+        libraryDisplay.appendChild(row);
 }
 
 function isInvalidForm(author, title, pages) {
@@ -147,6 +159,6 @@ function resetForm() {
     pagesErrorSpan.textContent = '';
 }
 
-function deleteBook(e) {
-    console.log(e);
+function deleteBook(event) {
+    console.log(event);
 }
