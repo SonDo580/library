@@ -102,6 +102,7 @@ function displayBook(book) {
         <td>${book.pages}</td>`;
 
     const toggleStatusButton = document.createElement('span');
+    toggleStatusButton.classList.add('toggle');
     toggleStatusButton.textContent = 'toggle';
     toggleStatusButton.addEventListener('click', toggleStatus);
 
